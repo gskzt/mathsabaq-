@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <title>Тест - Математика</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="admin.html" class="admin-link-top">⚙️ Админ</a>
+            </div>
+            <a href="index.html" class="back-link">← Басты бетке оралу</a>
+            <h1>Тест</h1>
+        </header>
+
+        <main>
+            <div id="test-container">
+                <!-- Тест сұрақтары мұнда көрсетіледі -->
+            </div>
+
+            <div id="result-container" class="result-box" style="display: none;">
+                <h2>Тест нәтижесі</h2>
+                <div id="result-score"></div>
+                <div id="result-details"></div>
+                <button onclick="location.reload()" class="btn btn-primary">Қайта бастау</button>
+                <a href="index.html" class="btn btn-secondary">Басты бетке оралу</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Тестті көрсету
+        displayTest();
+    </script>
+</body>
+</html>

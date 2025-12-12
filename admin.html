@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <title>Админ панель</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-section">
+            <div class="login-box">
+                <h2>Админ панельге кіру</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Логин:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Кіру</button>
+                </form>
+                <div id="login-error" class="error-message" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div id="admin-panel" style="display: none;">
+            <header>
+                <div class="header-top">
+                    <a href="index.html" class="admin-link-top">🏠 Басты бет</a>
+                </div>
+                <button onclick="logout()" class="btn btn-secondary" style="position: absolute; top: 20px; left: 20px;">Шығу</button>
+                <h1>Админ панель</h1>
+            </header>
+
+            <main>
+                <section class="admin-section">
+                    <h2>Жаңа сабақ қосу</h2>
+                    <form id="add-lesson-form">
+                        <div class="form-group">
+                            <label for="lesson-title">Сабақ атауы:</label>
+                            <input type="text" id="lesson-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lesson-explanation">Түсіндіру:</label>
+                            <textarea id="lesson-explanation" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="lesson-exercises">Жаттығулар (әр жаттығуды жолға бөліп жазыңыз):</label>
+                            <textarea id="lesson-exercises" rows="5" placeholder="Мысалы: 2 + 2 = ?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Сабақ қосу</button>
+                    </form>
+                </section>
+
+                <section class="admin-section">
+                    <h2>Тест сұрақтарын қосу</h2>
+                    <form id="add-question-form">
+                        <div class="form-group">
+                            <label for="question-text">Сұрақ мәтіні:</label>
+                            <input type="text" id="question-text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="option-a">A) Жауап:</label>
+                            <input type="text" id="option-a" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="option-b">B) Жауап:</label>
+                            <input type="text" id="option-b" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="option-c">C) Жауап:</label>
+                            <input type="text" id="option-c" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correct-answer">Дұрыс жауап (A, B немесе C):</label>
+                            <select id="correct-answer" required>
+                                <option value="">Таңдаңыз</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Сұрақ қосу</button>
+                    </form>
+                </section>
+
+                <section class="admin-section">
+                    <h2>Қосылған сабақтар</h2>
+                    <div id="lessons-list-admin"></div>
+                </section>
+
+                <section class="admin-section">
+                    <h2>Қосылған тест сұрақтары</h2>
+                    <div id="questions-list-admin"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Админ панельді бастау
+        initAdmin();
+    </script>
+</body>
+</html>

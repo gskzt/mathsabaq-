@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деректерді тазалау</title>
+</head>
+<body>
+    <h1>Деректерді тазалау</h1>
+    <p>Бұл бетті ашқаннан кейін localStorage тазаланады және жаңа деректер орнатылады.</p>
+    <script>
+        // Барлық деректерді тазалау
+        localStorage.removeItem('math_lessons');
+        localStorage.removeItem('math_test_questions');
+        localStorage.removeItem('admin_logged_in');
+        
+        alert('Деректер тазаланды! Енді index.html-ге оралыңыз.');
+        window.location.href = 'index.html';
+    </script>
+</body>
+</html>
+

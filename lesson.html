@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <title>Сабақ - Математика</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="admin.html" class="admin-link-top">⚙️ Админ</a>
+            </div>
+            <a href="index.html" class="back-link">← Басты бетке оралу</a>
+            <h1 id="lesson-title">Сабақ</h1>
+        </header>
+
+        <main>
+            <section class="lesson-content">
+                <h2>Түсіндіру</h2>
+                <div id="lesson-explanation" class="explanation-box">
+                    <!-- Сабақ мазмұны мұнда көрсетіледі -->
+                </div>
+            </section>
+
+            <section class="exercises-section">
+                <h2>Жаттығулар</h2>
+                <div id="exercises-container">
+                    <!-- Жаттығулар мұнда көрсетіледі -->
+                </div>
+            </section>
+
+            <div class="actions">
+                <a href="test.html" id="test-link" class="btn btn-primary">Тестке өту</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Сабақ мазмұнын көрсету
+        displayLesson();
+    </script>
+</body>
+</html>
